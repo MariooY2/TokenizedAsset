@@ -133,7 +133,7 @@ export function PrimarySale() {
             <h2 className="text-3xl font-bold text-[#2C2416]" style={{fontFamily: "'Playfair Display', serif"}}>
               Exclusive Offering
             </h2>
-            <p className="text-sm text-[#8B6914] font-light tracking-wide">Picasso's Fillette au béret</p>
+            <p className="text-sm text-[#8B6914] font-light tracking-wide">Picasso&apos;s Fillette au béret</p>
           </div>
         </div>
         {saleActive ? (
