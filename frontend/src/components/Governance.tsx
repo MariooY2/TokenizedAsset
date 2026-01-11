@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
-import { useGovernance } from '@/src/hooks/useGovernance';
-import { ProposalType, ProposalStatus } from '@/src/types/contracts';
-import { formatDate, timeUntil } from '@/src/lib/utils';
+import { useGovernance } from '../hooks/useGovernance';
+import { ProposalType, ProposalStatus } from '../types/contracts';
+import { formatDate, timeUntil } from '../lib/utils';
 import { Vote, CheckCircle, XCircle, Scale, PlayCircle } from 'lucide-react';
 import { encodeAbiParameters } from 'viem';
 import { Modal } from './Modal';

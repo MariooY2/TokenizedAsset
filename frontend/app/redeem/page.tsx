@@ -1,6 +1,6 @@
 'use client';
 
-import { ExitDistribution } from '@/src/components/ExitDistribution';
+import { ExitDistribution } from '../../src/components/ExitDistribution';
 
 export default function RedeemPage() {
   return (

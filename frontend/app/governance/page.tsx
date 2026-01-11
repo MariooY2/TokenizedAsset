@@ -1,6 +1,6 @@
 'use client';
 
-import { Governance } from '@/src/components/Governance';
+import { Governance } from '../../src/components/Governance';
 
 export default function GovernancePage() {
   return (

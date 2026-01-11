@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
-import { useExitDistribution } from '@/src/hooks/useExitDistribution';
-import { useArtSecurityToken } from '@/src/hooks/useArtSecurityToken';
-import { formatTokenAmount, formatUSDC, parseTokenAmount, formatCurrency, formatNumber } from '@/src/lib/utils';
+import { useExitDistribution } from '../hooks/useExitDistribution';
+import { useArtSecurityToken } from '../hooks/useArtSecurityToken';
+import { formatTokenAmount, formatUSDC, parseTokenAmount, formatCurrency, formatNumber } from '../lib/utils';
 import { TrendingUp, Award, Coins } from 'lucide-react';
 import { Modal } from './Modal';
 

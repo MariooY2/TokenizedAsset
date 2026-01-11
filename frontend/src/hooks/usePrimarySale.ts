@@ -1,7 +1,7 @@
 import { useReadContract, useWriteContract } from 'wagmi';
-import { CONTRACT_ADDRESSES, PRICE_PER_TOKEN } from '@/src/config/contracts';
-import PrimarySaleABI from '@/src/abi/PrimarySale.json';
-import USDCABI from '@/src/abi/USDC.json';
+import { CONTRACT_ADDRESSES, PRICE_PER_TOKEN } from '../config/contracts';
+import PrimarySaleABI from '../abi/PrimarySale.json';
+import USDCABI from '../abi/USDC.json';
 
 export function usePrimarySale() {
   const { writeContractAsync } = useWriteContract();

@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 import { useAccount, useReadContract } from 'wagmi';
-import { usePrimarySale } from '@/src/hooks/usePrimarySale';
-import { useIdentityRegistry } from '@/src/hooks/useIdentityRegistry';
-import { formatTokenAmount, formatUSDC, parseTokenAmount, formatCurrency, formatNumber } from '@/src/lib/utils';
+import { usePrimarySale } from '../hooks/usePrimarySale';
+import { useIdentityRegistry } from '../hooks/useIdentityRegistry';
+import { formatTokenAmount, formatUSDC, parseTokenAmount, formatCurrency, formatNumber } from '../lib/utils';
 import { Sparkles, Check, Lock } from 'lucide-react';
-import USDCABI from '@/src/abi/USDC.json';
-import { CONTRACT_ADDRESSES } from '@/src/config/contracts';
+import USDCABI from '../abi/USDC.json';
+import { CONTRACT_ADDRESSES } from '../config/contracts';
 import { Modal } from './Modal';
 
 export function PrimarySale() {

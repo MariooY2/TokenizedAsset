@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
-import { useIdentityRegistry } from '@/src/hooks/useIdentityRegistry';
-import { formatDate, shortenAddress } from '@/src/lib/utils';
+import { useIdentityRegistry } from '../hooks/useIdentityRegistry';
+import { formatDate, shortenAddress } from '../lib/utils';
 import { Shield, UserPlus, UserMinus, RefreshCw, CheckCircle2, XCircle, AlertCircle, Crown } from 'lucide-react';
 import { Modal } from './Modal';
 

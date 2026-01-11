@@ -1,6 +1,6 @@
 import { useReadContract, useWriteContract } from 'wagmi';
-import { CONTRACT_ADDRESSES } from '@/src/config/contracts';
-import ArtSecurityTokenABI from '@/src/abi/ArtSecurityToken.json';
+import { CONTRACT_ADDRESSES } from '../config/contracts';
+import ArtSecurityTokenABI from '../abi/ArtSecurityToken.json';
 import { formatUnits } from 'viem';
 
 export function useArtSecurityToken() {

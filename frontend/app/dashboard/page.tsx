@@ -1,6 +1,6 @@
 'use client';
 
-import { TokenDashboard } from '@/src/components/TokenDashboard';
+import { TokenDashboard } from '../../src/components/TokenDashboard';
 
 export default function DashboardPage() {
   return (

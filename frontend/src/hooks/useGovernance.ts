@@ -1,7 +1,7 @@
 import { useReadContract, useWriteContract } from 'wagmi';
-import { CONTRACT_ADDRESSES } from '@/src/config/contracts';
-import GovernanceABI from '@/src/abi/GovernanceContract.json';
-import { ProposalInfo } from '@/src/types/contracts';
+import { CONTRACT_ADDRESSES } from '../config/contracts';
+import GovernanceABI from '../abi/GovernanceContract.json';
+import { ProposalInfo } from '../types/contracts';
 
 export function useGovernance() {
   const { writeContractAsync } = useWriteContract();

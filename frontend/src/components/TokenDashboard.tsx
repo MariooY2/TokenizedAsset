@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useAccount } from 'wagmi';
-import { useArtSecurityToken } from '@/src/hooks/useArtSecurityToken';
-import { formatTokenAmount, formatUSDC, parseTokenAmount, formatCurrency, formatNumber } from '@/src/lib/utils';
+import { useArtSecurityToken } from '../hooks/useArtSecurityToken';
+import { formatTokenAmount, formatUSDC, parseTokenAmount, formatCurrency, formatNumber } from '../lib/utils';
 import { Briefcase, Send, ImageIcon, CheckCircle, XCircle } from 'lucide-react';
 import { Modal } from './Modal';
 

@@ -1,7 +1,7 @@
 import { useReadContract, useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
-import { CONTRACT_ADDRESSES } from '@/src/config/contracts';
-import IdentityRegistryABI from '@/src/abi/IdentityRegistry.json';
-import { Identity } from '@/src/types/contracts';
+import { CONTRACT_ADDRESSES } from '../config/contracts';
+import IdentityRegistryABI from '../abi/IdentityRegistry.json';
+import { Identity } from '../types/contracts';
 
 export function useIdentityRegistry() {
   const { writeContractAsync } = useWriteContract();

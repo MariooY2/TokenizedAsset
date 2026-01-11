@@ -2,7 +2,7 @@
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount } from 'wagmi';
-import { useIdentityRegistry } from '@/src/hooks/useIdentityRegistry';
+import { useIdentityRegistry } from '../hooks/useIdentityRegistry';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, ShoppingCart, Wallet, TrendingDown, Vote, Shield, Sparkles } from 'lucide-react';

@@ -1,6 +1,6 @@
 'use client';
 
-import { KYCManagement } from '@/src/components/KYCManagement';
+import { KYCManagement } from '../../src/components/KYCManagement';
 
 export default function KYCPage() {
   return (

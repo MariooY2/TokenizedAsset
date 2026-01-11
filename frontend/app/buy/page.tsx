@@ -1,6 +1,6 @@
 'use client';
 
-import { PrimarySale } from '@/src/components/PrimarySale';
+import { PrimarySale } from '../../src/components/PrimarySale';
 
 export default function BuyPage() {
   return (

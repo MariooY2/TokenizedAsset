@@ -1,4 +1,4 @@
-import { ContractAddresses } from '@/src/types/contracts';
+import { ContractAddresses } from '../types/contracts';
 
 // Deployed on Sepolia
 export const CONTRACT_ADDRESSES: ContractAddresses = {

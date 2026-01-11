@@ -1,6 +1,6 @@
 import { useReadContract, useWriteContract } from 'wagmi';
-import { CONTRACT_ADDRESSES } from '@/src/config/contracts';
-import ExitDistributionABI from '@/src/abi/ExitDistribution.json';
+import { CONTRACT_ADDRESSES } from '../config/contracts';
+import ExitDistributionABI from '../abi/ExitDistribution.json';
 
 export function useExitDistribution() {
   const { writeContractAsync } = useWriteContract();
