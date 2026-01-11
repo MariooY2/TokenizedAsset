@@ -32,6 +32,11 @@ contract GovernanceContractTest is Test {
         governance = new GovernanceContract(spv, artAdvisor);
 
         registry = new IdentityRegistry();
+
+        // Whitelist owner for initial token minting
+        uint256 expiry = block.timestamp + 365 days;
+        registry.addToWhitelist(owner, expiry, "US");
+
         ast = new ArtSecurityToken(
             address(registry),
             "Fillette au beret",
@@ -41,6 +46,9 @@ contract GovernanceContractTest is Test {
         );
 
         governance.setASTToken(address(ast));
+
+        // Transfer AST ownership to governance contract so it can control transfers
+        ast.transferOwnership(address(governance));
     }
 
     function testInitialGovernanceTokens() public {

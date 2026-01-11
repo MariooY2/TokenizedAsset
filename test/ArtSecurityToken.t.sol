@@ -19,6 +19,11 @@ contract ArtSecurityTokenTest is Test {
         investor2 = makeAddr("investor2");
 
         registry = new IdentityRegistry();
+
+        // Whitelist owner for initial token minting
+        uint256 expiry = block.timestamp + 365 days;
+        registry.addToWhitelist(owner, expiry, "US");
+
         token = new ArtSecurityToken(
             address(registry),
             "Fillette au beret",

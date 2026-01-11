@@ -36,6 +36,14 @@ contract ExitDistributionTest is Test {
         investor2 = makeAddr("investor2");
 
         registry = new IdentityRegistry();
+
+        uint256 expiry = block.timestamp + 365 days;
+
+        // Whitelist owner and investors
+        registry.addToWhitelist(owner, expiry, "US");
+        registry.addToWhitelist(investor1, expiry, "US");
+        registry.addToWhitelist(investor2, expiry, "UK");
+
         ast = new ArtSecurityToken(
             address(registry),
             "Fillette au beret",
@@ -47,12 +55,14 @@ contract ExitDistributionTest is Test {
 
         exitDist = new ExitDistribution(address(ast), address(usdc), address(registry));
 
-        uint256 expiry = block.timestamp + 365 days;
-        registry.addToWhitelist(investor1, expiry, "US");
-        registry.addToWhitelist(investor2, expiry, "UK");
+        // Whitelist exit distribution contract for receiving burned tokens
+        registry.addToWhitelist(address(exitDist), expiry, "US");
 
         ast.transfer(investor1, 1000 * 10**18);
         ast.transfer(investor2, 500 * 10**18);
+
+        // Enable transfers for redemption period
+        ast.setTransfersEnabled(true);
     }
 
     function testDepositProceeds() public {

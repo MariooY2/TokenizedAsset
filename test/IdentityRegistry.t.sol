@@ -47,6 +47,8 @@ contract IdentityRegistryTest is Test {
     }
 
     function testCannotAddWithPastExpiry() public {
+        // Set timestamp to ensure we can subtract
+        vm.warp(365 days);
         uint256 expiry = block.timestamp - 1 days;
 
         vm.expectRevert("Expiry must be in future");

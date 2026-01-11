@@ -1,0 +1,17 @@
+import { ContractAddresses } from '../types/contracts';
+
+// Deployed on Sepolia
+export const CONTRACT_ADDRESSES: ContractAddresses = {
+  usdc: '0x956c698332A76b7c4fB14880d828A2B25f186578',
+  identityRegistry: '0x35Ad16f67b4E38EF46791BdbD5d1896354EAc6f2',
+  artSecurityToken: '0x016755458093Ad87703af7553078f802fcdfa74e',
+  artPriceOracle: '0xeE44c5737471b0d0ab4156A0C7451c0b64e4B806',
+  primarySale: '0x5146Ed404be1620E9223d81B83666A7223026c03',
+  exitDistribution: '0xB282C6E8635E3acC1452Eb296696e1D0910A217c',
+  governance: '0xaF8501f36E7F3b206ee6Fa52DD3Dc32D678ac2bc',
+};
+
+// Constants
+export const PRICE_PER_TOKEN = 2000n * 10n ** 6n; // 2000 USDC (6 decimals)
+export const TOTAL_SUPPLY = 2000n * 10n ** 18n; // 2000 AST tokens
+export const INITIAL_VALUATION = 4000000n * 10n ** 6n; // $4M in USDC

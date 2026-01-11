@@ -36,6 +36,14 @@ contract PrimarySaleTest is Test {
         investor2 = makeAddr("investor2");
 
         registry = new IdentityRegistry();
+
+        uint256 expiry = block.timestamp + 365 days;
+
+        // Whitelist owner for initial token minting and transfers
+        registry.addToWhitelist(owner, expiry, "US");
+        registry.addToWhitelist(investor1, expiry, "US");
+        registry.addToWhitelist(investor2, expiry, "UK");
+
         ast = new ArtSecurityToken(
             address(registry),
             "Fillette au beret",
@@ -47,11 +55,13 @@ contract PrimarySaleTest is Test {
 
         sale = new PrimarySale(address(ast), address(usdc), address(registry));
 
+        // Whitelist sale contract for receiving tokens
+        registry.addToWhitelist(address(sale), expiry, "US");
+
         ast.transfer(address(sale), 2000 * 10**18);
 
-        uint256 expiry = block.timestamp + 365 days;
-        registry.addToWhitelist(investor1, expiry, "US");
-        registry.addToWhitelist(investor2, expiry, "UK");
+        // Enable transfers for primary sale
+        ast.setTransfersEnabled(true);
 
         usdc.mint(investor1, 10000000 * 10**6);
         usdc.mint(investor2, 10000000 * 10**6);

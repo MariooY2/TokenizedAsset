@@ -212,9 +212,8 @@ contract GovernanceContract is Ownable {
 
     /**
      * @dev Execute exit sale preparation
-     * @param data Encoded exit data
      */
-    function _executeExitSale(bytes memory data) internal {
+    function _executeExitSale(bytes memory /* data */) internal {
         require(address(astToken) != address(0), "AST token not set");
         astToken.setTransfersEnabled(true);
     }
@@ -232,7 +231,15 @@ contract GovernanceContract is Ownable {
     /**
      * @dev Get proposal details
      * @param proposalId Proposal ID
-     * @return Proposal details tuple
+     * @return id Proposal ID
+     * @return proposalType Type of proposal
+     * @return description Proposal description
+     * @return proposer Address that created the proposal
+     * @return createdAt Timestamp when proposal was created
+     * @return votingEnds Timestamp when voting period ends
+     * @return votesFor Total votes in favor
+     * @return votesAgainst Total votes against
+     * @return status Current proposal status
      */
     function getProposal(uint256 proposalId)
         external
